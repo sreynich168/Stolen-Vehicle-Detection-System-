@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stolen Vehicle Detection System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #020617, #020617);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .card {
+            width: 420px;
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 0 30px rgba(14,165,233,0.15);
+            text-align: center;
+        }
+
+        .badge {
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle, #0ea5e9, #0369a1);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+        .upload-box {
+            margin-top: 25px;
+            border: 2px dashed #334155;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border: none;
+            border-radius: 10px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .safe {
+            color: #22c55e;
+        }
+
+        .stolen {
+            color: #ef4444;
+        }
+
+        footer {
+            margin-top: 18px;
+            font-size: 11px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="badge">🚓</div>
+    <h1>Stolen Vehicle Detection</h1>
+    <p>AI-based vehicle safety verification system</p>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <div class="upload-box">
+            <label for="image">📤 Upload / 📷 Capture Vehicle Image</label>
+            <input type="file" id="image" name="image" accept="image/*" capture="environment" required>
+        </div>
+
+        <button type="submit">🔍 Check Vehicle</button>
+    </form>
+
+    
+
+    <footer>
+        MCA Mini Project • Simulation Only
+    </footer>
+</div>
+
+</body>
+</html>
